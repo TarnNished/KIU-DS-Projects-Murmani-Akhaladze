@@ -72,7 +72,6 @@ def generate_report(students: dict) -> dict:
 
 if __name__ == "__main__":
 
-    # 1. Find and display top 5 performers
     print("\n=== TOP 5 PERFORMERS ===")
     top_5 = find_top_performers(students, 5)
     for rank, (student_id, avg_score) in enumerate(top_5, 1):
@@ -80,7 +79,6 @@ if __name__ == "__main__":
         grade = assign_grade(avg_score)
         print(f"{rank}. {student_id} - {student_name}: {avg_score} ({grade})")
 
-    # 2. Students who failed
     print("\n=== STUDENTS WHO FAILED ===")
     failed_students = []
     for student_id, student_info in students.items():
@@ -95,7 +93,6 @@ if __name__ == "__main__":
     else:
         print("No students failed!")
 
-    # 3. Generate and display class summary report
     print("\n=== CLASS SUMMARY REPORT ===")
     print("-" * 50)
     report = generate_report(students)
@@ -110,7 +107,6 @@ if __name__ == "__main__":
     print(f"Lowest Score: {report['lowest_score']}")
     print(f"Average Attendance Rate: {report['average_attendance_rate']}%")
 
-    # 4. Grade Distribution
     print("\n=== GRADE DISTRIBUTION ===")
     grades = [assign_grade(calculate_average(s["scores"])) for s in students.values()]
     dist = {g: grades.count(g) for g in sorted(set(grades))}

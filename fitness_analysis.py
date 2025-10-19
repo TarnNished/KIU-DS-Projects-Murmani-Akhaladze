@@ -2,13 +2,6 @@ import numpy as np
 
 np.random.seed(42)
 
-print("=" * 80)
-print("TASK 3: APPLIED DATA ANALYSIS - FITNESS TRACKING")
-print("=" * 80)
-
-print("\n### PART A: DATA GENERATION & PREPARATION ###\n")
-print("-" * 80)
-
 num_users = 100
 num_days = 90
 num_metrics = 4
@@ -78,8 +71,7 @@ print(f"Inserted {outlier_count} outlier values ({(outlier_count/total_elements)
 print(f"\nData preparation complete!")
 print(f"Total data quality issues: {nan_count + outlier_count} ({((nan_count + outlier_count)/total_elements)*100:.1f}%)")
 
-print("\n\n### PART B: DATA CLEANING & VALIDATION ###\n")
-print("-" * 80)
+
 
 def handle_missing(data):
     data_copy = data.copy()
@@ -128,17 +120,15 @@ for metric_idx in range(num_metrics):
     print(f"  Outliers removed: {outliers_removed}")
     print(f"  Valid range: [{lower:.2f}, {upper:.2f}]")
 
-print("\n" + "-" * 80)
-print("Handling missing values...")
 fitness_data = handle_missing(fitness_data)
 
 final_nan_count = np.sum(np.isnan(fitness_data))
 print(f"\nFinal NaN count: {final_nan_count}")
 
 if final_nan_count == 0:
-    print("✓ Data cleaning successful! No NaN values remain.")
+    print("Data cleaning successful! No NaN values remain.")
 else:
-    print(f"⚠ Warning: {final_nan_count} NaN values still present.")
+    print(f"Warning: {final_nan_count} NaN values still present.")
 
 print(f"\nCleaned data statistics:")
 for metric_idx, name in enumerate(metric_names):
@@ -146,11 +136,6 @@ for metric_idx, name in enumerate(metric_names):
     print(f"{name}: Mean={metric_data.mean():.2f}, Std={metric_data.std():.2f}, "
           f"Min={metric_data.min():.2f}, Max={metric_data.max():.2f}")
 
-print("\n\n### PART C: COMPREHENSIVE ANALYSIS ###\n")
-print("=" * 80)
-
-print("\n1. USER BEHAVIOR PATTERNS")
-print("-" * 80)
 
 user_avg_metrics = fitness_data.mean(axis=1)
 
@@ -358,6 +343,3 @@ if len(consistent_achievers) > 0:
               f"{user_avg_metrics[idx, 0]:9.1f} | {user_avg_metrics[idx, 1]:12.1f} | "
               f"{user_avg_metrics[idx, 2]:14.1f}")
 
-print("\n" + "=" * 80)
-print("ANALYSIS COMPLETE")
-print("=" * 80)
