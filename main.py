@@ -1,9 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 students = {
     "S001": {"name": "Giorgi Beridze", "scores": [88, 92, 79, 95], "attendance": 28},
     "S002": {"name": "Davit Kvaratskhelia", "scores": [75, 81, 74, 80], "attendance": 26},

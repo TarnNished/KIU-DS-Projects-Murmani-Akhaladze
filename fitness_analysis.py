@@ -1,14 +1,3 @@
-"""
-Introduction to Data Science with Python
-Project 1: Python & NumPy Fundamentals
-Task 3: Applied Data Analysis
-
-Fitness Tracking Company - User Activity Analysis
-
-Student: Makha
-Date: October 19, 2025
-"""
-
 import numpy as np
 
 np.random.seed(42)
