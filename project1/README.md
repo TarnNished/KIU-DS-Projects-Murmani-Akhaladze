@@ -33,8 +33,7 @@ Real-world data analysis simulating fitness tracking company user behavior:
 
 ##  Student Information
 
-**Name:** Makha  
-**Student ID:** [Your Student ID]  
+**Name:** Murmani Akhaladze
 **Date:** October 19, 2025  
 **Course:** Introduction to Data Science with Python
 
