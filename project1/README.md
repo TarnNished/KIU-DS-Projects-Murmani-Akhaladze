@@ -210,12 +210,3 @@ DataScienceAssignments/
 
 ---
 
-##  Contact
-
-For questions or clarifications, please contact:  
-**Makha** - [Your Email]
-
----
-
-*This project was completed as part of the Introduction to Data Science with Python course, demonstrating mastery of Python programming fundamentals and NumPy operations for data analysis.*
-
