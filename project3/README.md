@@ -53,7 +53,7 @@ These patterns highlight that consistent study habits, good attendance, and bala
 
 ---
 
-##  Notes
+## Notes
 - This project was completed as part of the **KIU Introduction to Data Science** course.  
 - All work is original and done individually.
 
